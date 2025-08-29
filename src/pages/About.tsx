@@ -11,38 +11,46 @@ const About = () => {
     <div className="min-h-screen bg-background">
       <Header />
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4">
-        <div className="container mx-auto max-w-4xl text-center">
-          <h1 className="text-5xl md:text-6xl font-light text-foreground mb-8 tracking-tight">
-            Do Less, <span className="text-primary font-medium">Achieve More</span>
-          </h1>
-          <p className="text-xl text-muted-foreground leading-relaxed mb-12 font-light">
-            Empowering <span className="text-primary font-medium">Communities</span> Across Industries
-          </p>
-          <div className="max-w-4xl mx-auto mb-12">
-            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              I breathe life into <span className="text-primary font-medium">LLMs</span> by allowing them to think, navigate, and act on <span className="text-primary font-medium">real-world challenges</span>. From fashion and interior design to food, productivity, finance, and accessibility, my products help communities <span className="text-primary font-medium">work smarter</span>, unlock creativity, and achieve meaningful results faster.
-            </p>
-            <p className="text-lg text-foreground font-medium">
-              All products, platforms, and activities are <span className="text-primary font-semibold">fully free</span> for users, including tools like DoLess.Work, which enables <span className="text-primary font-medium">students and differently-abled users</span> to navigate the web independently.
-            </p>
+      <section className="pt-40 pb-32 px-4">
+        <div className="container mx-auto max-w-5xl text-center">
+          <div className="space-y-12">
+            <div className="space-y-8">
+              <h1 className="text-5xl md:text-6xl font-light text-foreground mb-8 tracking-tight">
+                Do Less, <span className="text-primary font-semibold">Achieve More</span>
+              </h1>
+              <p className="text-2xl text-muted-foreground leading-relaxed mb-8 font-light">
+                Empowering <span className="text-primary font-medium">Communities</span> Across Industries
+              </p>
+            </div>
+            
+            <div className="max-w-4xl mx-auto space-y-8">
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                I breathe life into <span className="text-primary font-medium">LLMs</span> by allowing them to think, navigate, and act on <span className="text-primary font-medium">real-world challenges</span>. From fashion and interior design to food, productivity, finance, and accessibility, my products help communities <span className="text-primary font-medium">work smarter</span>, unlock creativity, and achieve meaningful results faster.
+              </p>
+              <p className="text-lg text-foreground font-semibold">
+                All products, platforms, and activities are <span className="text-primary font-bold">fully free</span> for users, including tools like DoLess.Work, which enables <span className="text-primary font-medium">students and differently-abled users</span> to navigate the web independently.
+              </p>
+            </div>
+            
+            <div className="space-y-6">
+              <Button size="lg" className="font-semibold px-10 py-4 text-lg group shadow-soft">
+                Explore the Ecosystem
+                <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </div>
           </div>
-          <Button size="lg" className="font-medium group">
-            Explore the Ecosystem
-            <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-          </Button>
         </div>
       </section>
 
       {/* Mission Section */}
-      <section className="py-20 px-4 bg-subtle">
-        <div className="container mx-auto max-w-4xl">
-          <div className="text-center mb-16">
-            <Target className="w-12 h-12 text-primary mx-auto mb-6" />
+      <section className="py-32 px-4 bg-subtle">
+        <div className="container mx-auto max-w-5xl">
+          <div className="text-center mb-20">
+            <Target className="w-16 h-16 text-primary mx-auto mb-8" />
             <h2 className="text-4xl font-light text-foreground mb-8 tracking-tight">
-              Democratizing <span className="text-primary font-medium">Technology</span> for Every Community
+              Democratizing <span className="text-primary font-semibold">Technology</span> for Every Community
             </h2>
-            <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+            <p className="text-xl text-muted-foreground leading-relaxed max-w-4xl mx-auto font-light">
               As a <span className="text-primary font-medium">student innovator</span>, I started the DoLess Achieve More Ecosystem to make advanced problem-solving products accessible to all — <strong className="text-primary">free of charge</strong>. By breathing life into LLMs, I create platforms that reduce <span className="text-primary font-medium">repetitive work</span>, guide complex tasks, and help learners and creators across industries achieve more while focusing on what truly matters: <span className="text-primary font-medium">creativity, growth, and impact</span>.
             </p>
           </div>

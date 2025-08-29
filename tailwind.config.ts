@@ -71,12 +71,24 @@ export default {
 				'minimal': 'var(--shadow-minimal)',
 				'soft': 'var(--shadow-soft)'
 			},
-			borderRadius: {
-				'minimal': 'var(--radius-minimal)',
-				lg: 'var(--radius)',
-				md: 'calc(var(--radius) - 2px)',
-				sm: 'calc(var(--radius) - 4px)'
-			},
+          spacing: {
+            'xs': 'var(--space-xs)',
+            'sm': 'var(--space-sm)', 
+            'md': 'var(--space-md)',
+            'lg': 'var(--space-lg)',
+            'xl': 'var(--space-xl)',
+            '2xl': 'var(--space-2xl)',
+            '3xl': 'var(--space-3xl)',
+            '4xl': 'var(--space-4xl)',
+            '5xl': 'var(--space-5xl)',
+            '6xl': 'var(--space-6xl)'
+          },
+          borderRadius: {
+            'minimal': 'var(--radius-minimal)',
+            lg: 'var(--radius)',
+            md: 'calc(var(--radius) - 2px)',
+            sm: 'calc(var(--radius) - 4px)'
+          },
 			keyframes: {
 				'accordion-down': {
 					from: {
