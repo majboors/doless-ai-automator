@@ -1,104 +1,76 @@
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Bot, Globe, Shield } from "lucide-react";
-import heroImage from "@/assets/hero-bg.jpg";
+import { ArrowRight, Sparkles } from "lucide-react";
 
 export const HeroSection = () => {
   return (
-    <section className="min-h-screen bg-gradient-to-br from-background to-secondary relative overflow-hidden">
-      {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center opacity-10"
-        style={{ backgroundImage: `url(${heroImage})` }}
-      />
-      
+    <section className="min-h-[80vh] bg-background relative">      
       {/* Content */}
-      <div className="relative container mx-auto px-4 pt-20 pb-16">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Column - Text Content */}
+      <div className="container mx-auto px-4 pt-32 pb-20">
+        <div className="max-w-4xl mx-auto text-center">
           <div className="space-y-8">
             <div className="space-y-6">
-              <div className="flex flex-wrap gap-3">
-                <Badge variant="secondary" className="px-4 py-2 bg-primary/10 text-primary border-primary/20">
-                  <Bot className="w-4 h-4 mr-2" />
-                  Multi-Agent Automation
-                </Badge>
-                <Badge variant="secondary" className="px-4 py-2 bg-primary/10 text-primary border-primary/20">
-                  <Globe className="w-4 h-4 mr-2" />
-                  Global Productivity
-                </Badge>
-                <Badge variant="secondary" className="px-4 py-2 bg-primary/10 text-primary border-primary/20">
-                  <Shield className="w-4 h-4 mr-2" />
-                  Enterprise-Ready Security
-                </Badge>
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-soft border border-primary/20 rounded-full text-primary text-sm font-medium">
+                <Sparkles className="w-4 h-4" />
+                Now in public beta
               </div>
 
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight">
-                🚀 The Browser That 
-                <span className="bg-gradient-hero bg-clip-text text-transparent"> Works For You</span>
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-light text-foreground leading-[1.1] tracking-tight">
+                Work Smarter,{" "}
+                <span className="font-medium text-primary">Not Harder.</span>
               </h1>
 
-              <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl">
-                DoLess.Work is not just an AI chatbot — it's a multi-agent AI browser that can search, 
-                analyze, and take actions across the web. From automating workflows to executing tasks, 
-                it's your digital workforce in a browser tab.
+              <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto font-light">
+                The Browser That Works For You
               </p>
 
-              <p className="text-lg font-medium text-foreground">
-                "Work Smarter, Not Harder."
+              <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+                DoLess.Work is a multi-agent AI browser that automates web tasks. 
+                Search, analyze, and execute actions across the internet while you focus on what matters.
               </p>
             </div>
 
             <div className="space-y-4">
               <Button 
                 size="lg" 
-                className="bg-primary hover:bg-primary-glow text-primary-foreground font-semibold px-8 py-4 text-lg shadow-glow transition-all duration-300 hover:scale-105"
+                className="bg-foreground text-background hover:bg-foreground/90 font-medium px-8 py-3 rounded-minimal group"
               >
-                👉 Try DoLessWork Now
+                Try DoLessWork
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
               <p className="text-sm text-muted-foreground">
-                Free beta testing available worldwide
+                Free • No signup required • Available worldwide
               </p>
             </div>
           </div>
+        </div>
 
-          {/* Right Column - Visual Element */}
-          <div className="relative">
-            <div className="bg-gradient-hero rounded-3xl p-1 shadow-elegant">
-              <div className="bg-background rounded-3xl p-8">
-                <div className="space-y-6">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-3 h-3 bg-primary rounded-full"></div>
-                    <div className="w-3 h-3 bg-primary-glow rounded-full"></div>
-                    <div className="w-3 h-3 bg-muted rounded-full"></div>
+        {/* Minimal Visual Element */}
+        <div className="mt-20 max-w-5xl mx-auto">
+          <div className="bg-card border border-border rounded-minimal p-1 shadow-minimal">
+            <div className="bg-background rounded-minimal p-8">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="text-center space-y-2">
+                  <div className="w-8 h-8 bg-primary/10 rounded-full mx-auto flex items-center justify-center">
+                    <div className="w-2 h-2 bg-primary rounded-full" />
                   </div>
-                  
-                  <div className="space-y-4">
-                    <div className="text-sm text-muted-foreground">AI Agent Status</div>
-                    
-                    <div className="space-y-3">
-                      <div className="flex items-center justify-between p-3 bg-secondary rounded-lg">
-                        <span className="text-foreground font-medium">🤖 Researcher Agent</span>
-                        <span className="text-primary font-semibold">Active</span>
-                      </div>
-                      
-                      <div className="flex items-center justify-between p-3 bg-secondary rounded-lg">
-                        <span className="text-foreground font-medium">✍️ Writer Agent</span>
-                        <span className="text-primary font-semibold">Active</span>
-                      </div>
-                      
-                      <div className="flex items-center justify-between p-3 bg-secondary rounded-lg">
-                        <span className="text-foreground font-medium">⚡ Executor Agent</span>
-                        <span className="text-primary font-semibold">Processing</span>
-                      </div>
-                    </div>
-                    
-                    <div className="mt-6 p-4 bg-primary/5 border border-primary/20 rounded-lg">
-                      <p className="text-sm text-foreground">
-                        💼 <strong>Current Task:</strong> "Find 10 trending e-commerce products and create a Google Sheet with pricing analysis..."
-                      </p>
-                    </div>
+                  <p className="text-sm font-medium text-foreground">Multi-Agent System</p>
+                  <p className="text-xs text-muted-foreground">Collaborative AI agents working in sync</p>
+                </div>
+                
+                <div className="text-center space-y-2">
+                  <div className="w-8 h-8 bg-primary/10 rounded-full mx-auto flex items-center justify-center">
+                    <div className="w-2 h-2 bg-primary rounded-full" />
                   </div>
+                  <p className="text-sm font-medium text-foreground">Web Automation</p>
+                  <p className="text-xs text-muted-foreground">Execute tasks across any website</p>
+                </div>
+                
+                <div className="text-center space-y-2">
+                  <div className="w-8 h-8 bg-primary/10 rounded-full mx-auto flex items-center justify-center">
+                    <div className="w-2 h-2 bg-primary rounded-full" />
+                  </div>
+                  <p className="text-sm font-medium text-foreground">Natural Language</p>
+                  <p className="text-xs text-muted-foreground">Simple commands, powerful results</p>
                 </div>
               </div>
             </div>

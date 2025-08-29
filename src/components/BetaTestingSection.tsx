@@ -1,75 +1,49 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Globe2, Users, Zap } from "lucide-react";
+import { ArrowRight, Sparkles } from "lucide-react";
 
 export const BetaTestingSection = () => {
   return (
-    <section id="testing" className="py-20 bg-background relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent" />
-      
-      <div className="container mx-auto px-4 relative">
-        <div className="max-w-4xl mx-auto text-center">
-          <Card className="p-12 shadow-elegant border-2 border-primary/20 bg-gradient-to-br from-background to-secondary/30">
-            <CardContent className="pt-0">
+    <section id="testing" className="py-20 bg-background">
+      <div className="container mx-auto px-4">
+        <div className="max-w-4xl mx-auto">
+          <Card className="border-0 shadow-soft bg-card/80 backdrop-blur-sm">
+            <CardContent className="p-12 text-center">
               <div className="space-y-8">
-                {/* Badges */}
-                <div className="flex flex-wrap justify-center gap-3">
-                  <Badge variant="secondary" className="px-4 py-2 bg-primary/10 text-primary border-primary/20">
-                    <Globe2 className="w-4 h-4 mr-2" />
-                    Global Access
-                  </Badge>
-                  <Badge variant="secondary" className="px-4 py-2 bg-primary/10 text-primary border-primary/20">
-                    <Users className="w-4 h-4 mr-2" />
-                    Enterprise Ready
-                  </Badge>
-                  <Badge variant="secondary" className="px-4 py-2 bg-primary/10 text-primary border-primary/20">
-                    <Zap className="w-4 h-4 mr-2" />
-                    Instant Setup
-                  </Badge>
+                {/* Badge */}
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-soft border border-primary/20 rounded-full text-primary text-sm font-medium">
+                  <Sparkles className="w-4 h-4" />
+                  Public Beta Available
                 </div>
 
                 {/* Main Heading */}
                 <div className="space-y-4">
-                  <h2 className="text-4xl md:text-5xl font-bold text-foreground">
-                    Now Available for Public Testing
+                  <h2 className="text-4xl md:text-5xl font-light text-foreground tracking-tight">
+                    Now Available for Testing
                   </h2>
-                  <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-                    We're opening testing access worldwide for enterprises, professionals, 
-                    and power users who want to experience the future of agentic AI.
+                  <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+                    Experience the future of agentic AI. Open to enterprises, professionals, 
+                    and power users worldwide.
                   </p>
                 </div>
 
-                {/* Features List */}
-                <div className="grid md:grid-cols-2 gap-6 text-left max-w-2xl mx-auto">
-                  <div className="space-y-3">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-primary rounded-full" />
-                      <span className="text-foreground">Free beta access</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-primary rounded-full" />
-                      <span className="text-foreground">No credit card required</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-primary rounded-full" />
-                      <span className="text-foreground">24/7 support included</span>
-                    </div>
+                {/* Features Grid */}
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto text-left">
+                  <div className="space-y-2">
+                    <div className="w-1.5 h-1.5 bg-primary rounded-full" />
+                    <p className="text-sm text-foreground font-medium">Free access</p>
                   </div>
-                  <div className="space-y-3">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-primary rounded-full" />
-                      <span className="text-foreground">Enterprise features</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-primary rounded-full" />
-                      <span className="text-foreground">Secure sandboxed environment</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-primary rounded-full" />
-                      <span className="text-foreground">Multi-language support</span>
-                    </div>
+                  <div className="space-y-2">
+                    <div className="w-1.5 h-1.5 bg-primary rounded-full" />
+                    <p className="text-sm text-foreground font-medium">No signup required</p>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="w-1.5 h-1.5 bg-primary rounded-full" />
+                    <p className="text-sm text-foreground font-medium">Global availability</p>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="w-1.5 h-1.5 bg-primary rounded-full" />
+                    <p className="text-sm text-foreground font-medium">Enterprise ready</p>
                   </div>
                 </div>
 
@@ -77,12 +51,13 @@ export const BetaTestingSection = () => {
                 <div className="space-y-4">
                   <Button 
                     size="lg" 
-                    className="bg-primary hover:bg-primary-glow text-primary-foreground font-semibold px-12 py-4 text-xl shadow-glow transition-all duration-300 hover:scale-105"
+                    className="bg-foreground text-background hover:bg-foreground/90 font-medium px-8 py-3 rounded-minimal group"
                   >
-                    👉 Try DoLessWork Now
+                    Try DoLessWork
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Button>
                   <p className="text-sm text-muted-foreground">
-                    Join thousands of professionals already testing the future of work
+                    Join professionals testing the future of work automation
                   </p>
                 </div>
               </div>

@@ -5,8 +5,8 @@ export const FeaturesSection = () => {
   const features = [
     {
       icon: Zap,
-      title: "AI Web Automation",
-      description: "Auto-fill forms, book flights, scrape data, run reports automatically across any website."
+      title: "Web Automation",
+      description: "Auto-fill forms, book flights, scrape data, and run reports automatically across any website."
     },
     {
       icon: Bot,
@@ -16,16 +16,16 @@ export const FeaturesSection = () => {
     {
       icon: MessageSquare,
       title: "Natural Language Commands",
-      description: "Just tell it what you want: 'Find 20 suppliers in Europe and put them into a Google Sheet.'"
+      description: "Simple instructions like 'Find 20 suppliers in Europe and create a Google Sheet.'"
     },
     {
       icon: Globe,
       title: "Enterprise Integrations",
-      description: "Works seamlessly with Google Workspace, Microsoft 365, Slack, Notion, SAP, Salesforce."
+      description: "Seamless compatibility with Google Workspace, Microsoft 365, Slack, Notion, SAP, Salesforce."
     },
     {
       icon: Shield,
-      title: "Global Data Privacy Ready",
+      title: "Privacy & Compliance",
       description: "GDPR, HIPAA, and enterprise-grade compliance built-in for secure operations."
     },
     {
@@ -36,46 +36,45 @@ export const FeaturesSection = () => {
     {
       icon: Brain,
       title: "Workflow Memory",
-      description: "Remembers your tasks and processes, then repeats them automatically when needed."
+      description: "Remembers your processes and repeats them automatically when needed."
     },
     {
       icon: Workflow,
-      title: "IoT & System Automation",
-      description: "Control dashboards, manage logistics systems, and automate cloud services effortlessly."
+      title: "System Automation",
+      description: "Control dashboards, manage logistics systems, and automate cloud services."
     },
     {
       icon: FileText,
-      title: "Generative Workflows",
+      title: "Content Generation",
       description: "Create proposals, reports, or presentations directly from automated web actions."
     }
   ];
 
   return (
-    <section id="features" className="py-20 bg-gradient-subtle">
+    <section id="features" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center space-y-4 mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground">
-            Building the Future of Work Automation
+          <h2 className="text-4xl md:text-5xl font-light text-foreground tracking-tight">
+            Core Features
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            DoLess.Work is in active development, but enterprises and professionals worldwide 
-            are already testing our core modules.
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Comprehensive AI automation for modern workflows
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {features.map((feature, index) => (
-            <Card key={index} className="group hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 border border-border/50 hover:border-primary/20">
-              <CardHeader>
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                  <feature.icon className="w-6 h-6 text-primary" />
+            <Card key={index} className="border-0 shadow-minimal bg-card hover:shadow-soft transition-all duration-200 group">
+              <CardHeader className="pb-4">
+                <div className="w-10 h-10 bg-primary/10 rounded-minimal flex items-center justify-center mb-4">
+                  <feature.icon className="w-5 h-5 text-primary" />
                 </div>
-                <CardTitle className="text-xl font-semibold text-foreground">
+                <CardTitle className="text-lg font-medium text-foreground">
                   {feature.title}
                 </CardTitle>
               </CardHeader>
-              <CardContent>
-                <CardDescription className="text-muted-foreground text-base leading-relaxed">
+              <CardContent className="pt-0">
+                <CardDescription className="text-muted-foreground text-sm leading-relaxed">
                   {feature.description}
                 </CardDescription>
               </CardContent>
