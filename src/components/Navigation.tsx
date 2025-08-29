@@ -30,6 +30,9 @@ export const Header = () => {
             <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium">
               Features
             </a>
+            <a href="/about" className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium">
+              About
+            </a>
             <a href="#testimonials" className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium">
               Testimonials
             </a>
