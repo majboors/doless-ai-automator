@@ -55,10 +55,10 @@ export const FeaturesSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-4xl md:text-5xl font-light text-foreground tracking-tight">
-            Core Features
+            <span className="text-primary font-medium">Core</span> Features
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Comprehensive AI automation for modern workflows
+            Comprehensive <span className="text-primary font-medium">AI automation</span> for modern workflows
           </p>
         </div>
 

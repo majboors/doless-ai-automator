@@ -7,12 +7,12 @@ export const CtaSection = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <h2 className="text-4xl md:text-5xl font-light text-foreground leading-tight tracking-tight">
-            Work Smarter, Not Harder.
+            <span className="text-primary font-medium">Work Smarter</span>, Not Harder.
           </h2>
           
           <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-            Every wasted click is a wasted opportunity. Transform your workflow 
-            and unlock new potential with intelligent automation.
+            Every wasted click is a <span className="text-primary font-medium">wasted opportunity</span>. Transform your workflow 
+            and unlock new potential with <span className="text-primary font-medium">intelligent automation</span>.
           </p>
           
           <div className="pt-4">

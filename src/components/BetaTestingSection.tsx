@@ -19,11 +19,11 @@ export const BetaTestingSection = () => {
                 {/* Main Heading */}
                 <div className="space-y-4">
                   <h2 className="text-4xl md:text-5xl font-light text-foreground tracking-tight">
-                    Now Available for Testing
+                    Now Available for <span className="text-primary font-medium">Testing</span>
                   </h2>
                   <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-                    Experience the future of agentic AI. Open to enterprises, professionals, 
-                    and power users worldwide.
+                    Experience the <span className="text-primary font-medium">future of agentic AI</span>. Open to enterprises, professionals, 
+                    and power users <span className="text-primary font-medium">worldwide</span>.
                   </p>
                 </div>
 
@@ -31,7 +31,7 @@ export const BetaTestingSection = () => {
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto text-left">
                   <div className="space-y-2">
                     <div className="w-1.5 h-1.5 bg-primary rounded-full" />
-                    <p className="text-sm text-foreground font-medium">Free access</p>
+                    <p className="text-sm text-foreground font-medium"><span className="text-primary">Free</span> access</p>
                   </div>
                   <div className="space-y-2">
                     <div className="w-1.5 h-1.5 bg-primary rounded-full" />
@@ -43,7 +43,7 @@ export const BetaTestingSection = () => {
                   </div>
                   <div className="space-y-2">
                     <div className="w-1.5 h-1.5 bg-primary rounded-full" />
-                    <p className="text-sm text-foreground font-medium">Enterprise ready</p>
+                    <p className="text-sm text-foreground font-medium"><span className="text-primary">Enterprise</span> ready</p>
                   </div>
                 </div>
 

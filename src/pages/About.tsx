@@ -1,24 +1,30 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Target, Users, Lightbulb, Globe, BookOpen, Palette, Heart, Shield } from "lucide-react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { ArrowRight, Target, Users, Lightbulb, Globe, BookOpen, Palette, Heart, Shield, ExternalLink } from "lucide-react";
+import { Header } from "@/components/Navigation";
+import { useState } from "react";
 
 const About = () => {
+  const [selectedProduct, setSelectedProduct] = useState<{name: string, url: string} | null>(null);
+
   return (
     <div className="min-h-screen bg-background">
+      <Header />
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4">
         <div className="container mx-auto max-w-4xl text-center">
           <h1 className="text-5xl md:text-6xl font-light text-foreground mb-8 tracking-tight">
-            Do Less, Achieve More
+            Do Less, <span className="text-primary font-medium">Achieve More</span>
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed mb-12 font-light">
-            Empowering Communities Across Industries
+            Empowering <span className="text-primary font-medium">Communities</span> Across Industries
           </p>
           <div className="max-w-4xl mx-auto mb-12">
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              I breathe life into LLMs by allowing them to think, navigate, and act on real-world challenges. From fashion and interior design to food, productivity, finance, and accessibility, my products help communities work smarter, unlock creativity, and achieve meaningful results faster.
+              I breathe life into <span className="text-primary font-medium">LLMs</span> by allowing them to think, navigate, and act on <span className="text-primary font-medium">real-world challenges</span>. From fashion and interior design to food, productivity, finance, and accessibility, my products help communities <span className="text-primary font-medium">work smarter</span>, unlock creativity, and achieve meaningful results faster.
             </p>
             <p className="text-lg text-foreground font-medium">
-              All products, platforms, and activities are fully free for users, including tools like DoLess.Work, which enables students and differently-abled users to navigate the web independently.
+              All products, platforms, and activities are <span className="text-primary font-semibold">fully free</span> for users, including tools like DoLess.Work, which enables <span className="text-primary font-medium">students and differently-abled users</span> to navigate the web independently.
             </p>
           </div>
           <Button size="lg" className="font-medium group">
@@ -34,10 +40,10 @@ const About = () => {
           <div className="text-center mb-16">
             <Target className="w-12 h-12 text-primary mx-auto mb-6" />
             <h2 className="text-4xl font-light text-foreground mb-8 tracking-tight">
-              Democratizing Technology for Every Community
+              Democratizing <span className="text-primary font-medium">Technology</span> for Every Community
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-              As a student innovator, I started the DoLess Achieve More Ecosystem to make advanced problem-solving products accessible to all — <strong>free of charge</strong>. By breathing life into LLMs, I create platforms that reduce repetitive work, guide complex tasks, and help learners and creators across industries achieve more while focusing on what truly matters: creativity, growth, and impact.
+              As a <span className="text-primary font-medium">student innovator</span>, I started the DoLess Achieve More Ecosystem to make advanced problem-solving products accessible to all — <strong className="text-primary">free of charge</strong>. By breathing life into LLMs, I create platforms that reduce <span className="text-primary font-medium">repetitive work</span>, guide complex tasks, and help learners and creators across industries achieve more while focusing on what truly matters: <span className="text-primary font-medium">creativity, growth, and impact</span>.
             </p>
           </div>
         </div>
@@ -49,7 +55,7 @@ const About = () => {
           <div className="text-center mb-16">
             <Users className="w-12 h-12 text-primary mx-auto mb-6" />
             <h2 className="text-4xl font-light text-foreground mb-8 tracking-tight">
-              Products That Transform Work, Learning, and Access
+              Products That Transform <span className="text-primary font-medium">Work, Learning, and Access</span>
             </h2>
           </div>
           
@@ -86,13 +92,13 @@ const About = () => {
           <div className="text-center mb-16">
             <Palette className="w-12 h-12 text-primary mx-auto mb-6" />
             <h2 className="text-4xl font-light text-foreground mb-8 tracking-tight">
-              Modules of the DoLess Achieve More Ecosystem
+              Modules of the <span className="text-primary font-medium">DoLess Achieve More</span> Ecosystem
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-8">
-              Every product is designed to help a specific community reduce repetitive work, expand capabilities, and unlock creativity.
+              Every product is designed to help a specific community reduce <span className="text-primary font-medium">repetitive work</span>, expand capabilities, and unlock <span className="text-primary font-medium">creativity</span>.
             </p>
             <p className="text-lg text-foreground font-medium">
-              All products are free, including tools that make digital experiences accessible to differently-abled users.
+              All products are <span className="text-primary font-semibold">free</span>, including tools that make digital experiences accessible to <span className="text-primary font-medium">differently-abled users</span>.
             </p>
           </div>
 
@@ -109,24 +115,45 @@ const About = () => {
               { name: "WalletWala", description: "Personal finance guidance", url: "http://walletwala.techrealm.pk/" },
               { name: "DoLess.Work", description: "Browser platform for students and differently-abled users, free and fully accessible", url: "https://doless.work/" }
             ].map((product, index) => (
-              <a
-                key={index}
-                href={product.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group p-6 bg-background rounded-2xl border border-border hover:border-primary/20 transition-all duration-200 hover:shadow-soft"
-              >
-                <h3 className="text-lg font-medium text-foreground mb-3 group-hover:text-primary transition-colors">
-                  {product.name}
-                </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-                  {product.description}
-                </p>
-                <div className="flex items-center text-primary text-sm font-medium">
-                  Explore
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                </div>
-              </a>
+              <Dialog key={index}>
+                <DialogTrigger asChild>
+                  <div className="group p-6 bg-background rounded-2xl border border-border hover:border-primary/20 transition-all duration-200 hover:shadow-soft cursor-pointer">
+                    <h3 className="text-lg font-medium text-foreground mb-3 group-hover:text-primary transition-colors">
+                      {product.name}
+                    </h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                      {product.description}
+                    </p>
+                    <div className="flex items-center text-primary text-sm font-medium">
+                      Open Preview
+                      <ExternalLink className="w-4 h-4 ml-2 group-hover:scale-110 transition-transform" />
+                    </div>
+                  </div>
+                </DialogTrigger>
+                <DialogContent className="max-w-6xl max-h-[90vh] bg-background border-border">
+                  <DialogHeader>
+                    <DialogTitle className="flex items-center gap-2">
+                      {product.name}
+                      <a 
+                        href={product.url} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-primary hover:text-primary/80 transition-colors"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                      </a>
+                    </DialogTitle>
+                  </DialogHeader>
+                  <div className="w-full h-[70vh] rounded-lg overflow-hidden border border-border">
+                    <iframe
+                      src={product.url}
+                      className="w-full h-full"
+                      title={product.name}
+                      sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+                    />
+                  </div>
+                </DialogContent>
+              </Dialog>
             ))}
           </div>
         </div>
@@ -137,10 +164,10 @@ const About = () => {
         <div className="container mx-auto max-w-4xl text-center">
           <Heart className="w-12 h-12 text-primary mx-auto mb-6" />
           <h2 className="text-4xl font-light text-foreground mb-8 tracking-tight">
-            Communities Growing Together
+            <span className="text-primary font-medium">Communities</span> Growing Together
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-            Through these free products, communities across industries — designers, creators, students, differently-abled users — can focus on learning, experimenting, and innovating. By reducing repetitive work and guiding complex workflows, the DoLess Achieve More Ecosystem fosters <strong>growth, creativity, inclusion, and real-world impact</strong> for users in Pakistan and globally.
+            Through these <span className="text-primary font-medium">free products</span>, communities across industries — designers, creators, students, differently-abled users — can focus on <span className="text-primary font-medium">learning, experimenting, and innovating</span>. By reducing repetitive work and guiding complex workflows, the DoLess Achieve More Ecosystem fosters <strong className="text-primary">growth, creativity, inclusion, and real-world impact</strong> for users in <span className="text-primary font-medium">Pakistan and globally</span>.
           </p>
         </div>
       </section>
@@ -149,10 +176,10 @@ const About = () => {
       <section className="py-20 px-4 bg-subtle">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-4xl font-light text-foreground mb-8 tracking-tight">
-            Join the DoLess Achieve More Ecosystem
+            Join the <span className="text-primary font-medium">DoLess Achieve More</span> Ecosystem
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed mb-12 max-w-3xl mx-auto">
-            Experience the full potential of products that help you <strong>do less work and achieve more</strong>. Whether you're a creator, professional, student, or innovator, the ecosystem is designed to empower your community, your projects, and your growth — <strong>all products are free and accessible for everyone.</strong>
+            Experience the full potential of products that help you <strong className="text-primary">do less work and achieve more</strong>. Whether you're a creator, professional, student, or innovator, the ecosystem is designed to empower your community, your projects, and your growth — <strong className="text-primary">all products are free and accessible for everyone.</strong>
           </p>
           <Button size="lg" className="font-medium group">
             Explore Products Now

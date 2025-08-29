@@ -32,10 +32,10 @@ export const TestimonialsSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-4xl md:text-5xl font-light text-foreground tracking-tight">
-            Industry Leaders
+            <span className="text-primary font-medium">Industry</span> Leaders
           </h2>
           <p className="text-lg text-muted-foreground">
-            Trusted by professionals and enterprises worldwide
+            Trusted by professionals and <span className="text-primary font-medium">enterprises worldwide</span>
           </p>
         </div>
 

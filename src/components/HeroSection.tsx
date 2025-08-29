@@ -15,17 +15,17 @@ export const HeroSection = () => {
               </div>
 
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-light text-foreground leading-[1.1] tracking-tight">
-                Work Smarter,{" "}
-                <span className="font-medium text-primary">Not Harder.</span>
+                <span className="text-primary font-medium">Work Smarter</span>,{" "}
+                Not Harder.
               </h1>
 
               <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto font-light">
-                The Browser That Works For You
+                The Browser That <span className="text-primary font-medium">Works For You</span>
               </p>
 
               <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-                DoLess.Work is a multi-agent AI browser that automates web tasks. 
-                Search, analyze, and execute actions across the internet while you focus on what matters.
+                DoLess.Work is a <span className="text-primary font-medium">multi-agent AI browser</span> that automates web tasks. 
+                <span className="text-primary font-medium">Search, analyze, and execute</span> actions across the internet while you focus on what matters.
               </p>
             </div>
 
@@ -53,7 +53,7 @@ export const HeroSection = () => {
                   <div className="w-8 h-8 bg-primary/10 rounded-full mx-auto flex items-center justify-center">
                     <div className="w-2 h-2 bg-primary rounded-full" />
                   </div>
-                  <p className="text-sm font-medium text-foreground">Multi-Agent System</p>
+                  <p className="text-sm font-medium text-foreground"><span className="text-primary">Multi-Agent</span> System</p>
                   <p className="text-xs text-muted-foreground">Collaborative AI agents working in sync</p>
                 </div>
                 
@@ -61,7 +61,7 @@ export const HeroSection = () => {
                   <div className="w-8 h-8 bg-primary/10 rounded-full mx-auto flex items-center justify-center">
                     <div className="w-2 h-2 bg-primary rounded-full" />
                   </div>
-                  <p className="text-sm font-medium text-foreground">Web Automation</p>
+                  <p className="text-sm font-medium text-foreground"><span className="text-primary">Web</span> Automation</p>
                   <p className="text-xs text-muted-foreground">Execute tasks across any website</p>
                 </div>
                 
@@ -69,7 +69,7 @@ export const HeroSection = () => {
                   <div className="w-8 h-8 bg-primary/10 rounded-full mx-auto flex items-center justify-center">
                     <div className="w-2 h-2 bg-primary rounded-full" />
                   </div>
-                  <p className="text-sm font-medium text-foreground">Natural Language</p>
+                  <p className="text-sm font-medium text-foreground"><span className="text-primary">Natural</span> Language</p>
                   <p className="text-xs text-muted-foreground">Simple commands, powerful results</p>
                 </div>
               </div>

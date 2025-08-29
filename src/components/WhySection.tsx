@@ -44,10 +44,10 @@ export const WhySection = () => {
         <div className="max-w-4xl mx-auto">
           <div className="text-center space-y-6 mb-20">
             <h2 className="text-4xl md:text-5xl font-light text-foreground tracking-tight">
-              Why DoLess.Work?
+              Why <span className="text-primary font-medium">DoLess.Work</span>?
             </h2>
             <p className="text-lg text-muted-foreground">
-              Modern work faces three critical challenges that demand a new approach
+              Modern work faces three critical challenges that demand a <span className="text-primary font-medium">new approach</span>
             </p>
           </div>
 
@@ -60,10 +60,14 @@ export const WhySection = () => {
                     <problem.icon className="w-6 h-6 text-primary" />
                   </div>
                   <h3 className="text-lg font-medium text-foreground mb-3">
-                    {problem.title}
+                    {index === 0 && <><span className="text-primary">Fragmented</span> Workflows</>}
+                    {index === 1 && <><span className="text-primary">Efficiency</span> Pressure</>}
+                    {index === 2 && <><span className="text-primary">Repetitive</span> Tasks</>}
                   </h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    {problem.description}
+                    {index === 0 && <>Digital work is scattered across <span className="text-primary font-medium">multiple tools</span>, logins, and platforms, creating friction and inefficiency.</>}
+                    {index === 1 && <>Teams face increasing pressure to accomplish <span className="text-primary font-medium">more with fewer resources</span> and tighter deadlines.</>}
+                    {index === 2 && <>Endless forms, copy-paste work, and manual browsing consume <span className="text-primary font-medium">billions of valuable work hours</span>.</>}
                   </p>
                 </CardContent>
               </Card>
@@ -86,7 +90,7 @@ export const WhySection = () => {
             <div className="inline-flex items-center gap-3 px-6 py-4 bg-primary/5 border border-primary/20 rounded-minimal">
               <ArrowRight className="w-5 h-5 text-primary" />
               <p className="text-foreground font-medium">
-                DoLess.Work transforms every browser session into an intelligent digital worker
+                DoLess.Work transforms every browser session into an <span className="text-primary font-semibold">intelligent digital worker</span>
               </p>
             </div>
           </div>
