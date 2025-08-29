@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const Navigation = () => {
   return (
@@ -20,7 +21,7 @@ export const Header = () => {
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <h1 className="text-xl font-semibold text-foreground tracking-tight">DoLessWork</h1>
+            <Link to="/" className="text-xl font-semibold text-foreground tracking-tight hover:text-primary transition-colors">DoLessWork</Link>
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
@@ -30,9 +31,9 @@ export const Header = () => {
             <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium">
               Features
             </a>
-            <a href="/about" className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium">
+            <Link to="/about" className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium">
               About
-            </a>
+            </Link>
             <a href="#testimonials" className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium">
               Testimonials
             </a>
