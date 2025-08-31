@@ -28,7 +28,6 @@ export const Header = () => {
             />
             <Link to="/" className="text-xl font-semibold text-foreground tracking-tight hover:text-primary transition-colors">DoLessWork</Link>
           </div>
-          </div>
           
           <div className="hidden md:flex items-center space-x-8">
             <a href="#why" className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium">
