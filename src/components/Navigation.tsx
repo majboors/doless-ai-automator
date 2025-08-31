@@ -20,7 +20,12 @@ export const Header = () => {
     <header className="bg-background/80 backdrop-blur-sm border-b border-border/50 sticky top-0 z-50">
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-4">
+            <img 
+              src="/only_icon.png" 
+              alt="DoLessWork Icon" 
+              className="h-14 w-auto"
+            />
             <Link to="/" className="text-xl font-semibold text-foreground tracking-tight hover:text-primary transition-colors">DoLessWork</Link>
           </div>
           
