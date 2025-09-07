@@ -39,6 +39,9 @@ export const Header = () => {
             <Link to="/about" className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium">
               About
             </Link>
+            <Link to="/gesture-control" className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium">
+              Gesture Control
+            </Link>
             <a href="#testimonials" className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium">
               Testimonials
             </a>
