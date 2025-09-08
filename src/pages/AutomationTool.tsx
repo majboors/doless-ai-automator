@@ -52,7 +52,7 @@ const AutomationTool = () => {
             </div>
             
             {/* Tool Interface Preview */}
-            <div className="bg-card border rounded-lg shadow-soft p-8">
+            <div className="bg-card border rounded-lg shadow-soft p-8 cursor-pointer hover:scale-105 transition-transform duration-300 hover:shadow-lg">
               <div className="space-y-6">
                 <div className="flex items-center gap-3">
                   <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
@@ -70,20 +70,13 @@ const AutomationTool = () => {
                     <label className="text-sm font-medium text-foreground block mb-2">
                       Task Description
                     </label>
-                    <Textarea
-                      placeholder="Describe the repetitive task you want to automate..."
-                      value={taskInput}
-                      onChange={(e) => setTaskInput(e.target.value)}
-                      className="min-h-[120px]"
-                    />
+                    <div className="bg-muted/50 border rounded-md p-4 min-h-[120px] text-sm text-muted-foreground">
+                      Automate my weekly email newsletter process - collect content from various sources, format it into our template, add personalized subject lines, and schedule sends to different subscriber segments based on their preferences and time zones.
+                    </div>
                   </div>
                   
-                  <Button 
-                    onClick={handleSubmit}
-                    disabled={!taskInput.trim() || isProcessing}
-                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
-                  >
-                    {isProcessing ? "Processing..." : "Generate Automation"}
+                  <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
+                    Generate Automation
                   </Button>
                 </div>
               </div>
