@@ -37,9 +37,7 @@ const AutomationTool = () => {
                 </h1>
                 
                 <p className="text-xl text-muted-foreground leading-relaxed max-w-lg">
-                  DoLessWork's Smart Task Automation Generator is an innovative 
-                  AI tool that transforms your repetitive tasks into automated 
-                  workflows, saving you hours every week.
+                  Transform repetitive tasks into automated workflows using AI. Our Smart Task Automation Generator analyzes your manual processes and creates intelligent automation sequences. Save hours weekly by eliminating mundane work. Focus on strategic initiatives while automation handles routine operations. Boost productivity and reduce human error through consistent, reliable automated solutions.
                 </p>
               </div>
               
@@ -95,6 +93,71 @@ const AutomationTool = () => {
       </section>
 
       {/* Real-World Use Cases Section */}
+      <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-4 max-w-4xl text-center">
+          <div className="space-y-6">
+            <h2 className="text-3xl font-bold text-foreground">
+              Who Uses the Smart Task Automation Generator?
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Perfect for busy professionals managing repetitive workflows, entrepreneurs optimizing business processes, project managers coordinating team tasks, small business owners reducing manual work, and remote teams seeking consistent operations. Ideal for anyone spending hours on routine activities.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-16">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="text-center space-y-12">
+            <h2 className="text-3xl font-bold text-foreground">
+              Key Features
+            </h2>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                {
+                  icon: <Zap className="w-6 h-6" />,
+                  title: "AI-Powered Analysis",
+                  description: "Advanced algorithms break down complex tasks into logical automation steps"
+                },
+                {
+                  icon: <Target className="w-6 h-6" />,
+                  title: "Custom Workflow Creation",
+                  description: "Generate tailored automation solutions for your specific business needs"
+                },
+                {
+                  icon: <Clock className="w-6 h-6" />,
+                  title: "Time-Saving Templates",
+                  description: "Pre-built automation frameworks for common business processes"
+                },
+                {
+                  icon: <CheckCircle className="w-6 h-6" />,
+                  title: "Error Reduction",
+                  description: "Minimize human mistakes with consistent, repeatable automated processes"
+                },
+                {
+                  icon: <Play className="w-6 h-6" />,
+                  title: "Easy Implementation",
+                  description: "Simple deployment process that works with popular automation platforms"
+                }
+              ].map((feature, index) => (
+                <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
+                  <div className="space-y-4">
+                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary">
+                      {feature.icon}
+                    </div>
+                    <h3 className="text-lg font-semibold text-foreground">{feature.title}</h3>
+                    <p className="text-muted-foreground">{feature.description}</p>
+                  </div>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Real-World Use Cases Section */}
       <section className="py-20 bg-gradient-subtle">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="space-y-16">
@@ -103,14 +166,11 @@ const AutomationTool = () => {
                 Real-World Use Cases for the Smart Task Automation Generator
               </h2>
               <p className="text-lg text-muted-foreground max-w-4xl mx-auto">
-                The Smart Task Automation Generator is perfect for professionals who need to streamline repetitive workflows, 
-                entrepreneurs who want to optimize their business processes, and teams who want to focus on high-value work.
+                Maximize productivity by automating email workflows, data entry tasks, social media posting, invoice processing, and customer onboarding sequences. Create automated report generation, inventory management systems, appointment scheduling, lead nurturing campaigns, and document approval processes. Transform repetitive administrative work into seamless digital workflows. Integrate multiple platforms and tools through intelligent automation bridges. Eliminate manual data transfers between applications. Set up triggered responses for customer inquiries. Automate backup procedures, file organization, and recurring maintenance tasks for optimal business efficiency.
               </p>
-            </div>
-            
-            <div className="space-y-12">
+              
               <h3 className="text-2xl font-semibold text-center">
-                More ways to use DoLessWork's Smart Task Automation Generator
+                Automation Capabilities
               </h3>
               
               <div className="grid md:grid-cols-2 gap-8">
@@ -163,6 +223,46 @@ const AutomationTool = () => {
                     </div>
                   ))}
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Resources & Tips Section */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <div className="space-y-12">
+            <h2 className="text-3xl font-bold text-foreground text-center">
+              Resources & Tips for Automation Success
+            </h2>
+            
+            <div className="space-y-8">
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold text-foreground">Getting Started with Task Automation</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Begin by identifying your most time-consuming repetitive tasks. Document each step in detail, noting decision points and exceptions. 
+                  Start with simple, linear processes before advancing to complex workflows with multiple conditional branches. This foundation 
+                  ensures your automated solutions are robust and reliable from the start.
+                </p>
+              </div>
+              
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold text-foreground">Best Practices for Workflow Design</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Design your automation workflows with error handling and fallback procedures. Include checkpoints for quality control and 
+                  human oversight where necessary. Test thoroughly in a controlled environment before deploying to production. Regular 
+                  monitoring and optimization ensure your automated processes continue delivering value as your business evolves.
+                </p>
+              </div>
+              
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold text-foreground">Measuring Automation ROI</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Track time savings, error reduction, and productivity improvements to quantify your automation success. Monitor task 
+                  completion rates, processing speed, and resource allocation. Calculate the cost-benefit ratio by comparing automation 
+                  setup time against long-term time savings. Use these metrics to identify additional automation opportunities.
+                </p>
               </div>
             </div>
           </div>
