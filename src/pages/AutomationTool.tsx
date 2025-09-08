@@ -133,6 +133,11 @@ const AutomationTool = () => {
                   icon: <Play className="w-6 h-6" />,
                   title: "Easy Implementation",
                   description: "Simple deployment process that works with popular automation platforms"
+                },
+                {
+                  icon: <ArrowRight className="w-6 h-6" />,
+                  title: "Integration Support",
+                  description: "Connect seamlessly with hundreds of apps and services for complete workflow automation"
                 }
               ].map((feature, index) => (
                 <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
