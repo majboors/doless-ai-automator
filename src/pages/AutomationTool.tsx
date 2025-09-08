@@ -36,7 +36,7 @@ const AutomationTool = () => {
                   Generator
                 </h1>
                 
-                <p className="text-xl text-muted-foreground leading-relaxed max-w-lg">
+                <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">
                   Transform repetitive tasks into automated workflows using AI. Our Smart Task Automation Generator analyzes your manual processes and creates intelligent automation sequences. Save hours weekly by eliminating mundane work. Focus on strategic initiatives while automation handles routine operations. Boost productivity and reduce human error through consistent, reliable automated solutions.
                 </p>
               </div>
@@ -99,7 +99,7 @@ const AutomationTool = () => {
             <h2 className="text-3xl font-bold text-foreground">
               Who Uses the Smart Task Automation Generator?
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-base text-muted-foreground max-w-2xl mx-auto">
               Perfect for busy professionals managing repetitive workflows, entrepreneurs optimizing business processes, project managers coordinating team tasks, small business owners reducing manual work, and remote teams seeking consistent operations. Ideal for anyone spending hours on routine activities.
             </p>
           </div>
@@ -148,7 +148,7 @@ const AutomationTool = () => {
                       {feature.icon}
                     </div>
                     <h3 className="text-lg font-semibold text-foreground">{feature.title}</h3>
-                    <p className="text-muted-foreground">{feature.description}</p>
+                    <p className="text-sm text-muted-foreground">{feature.description}</p>
                   </div>
                 </Card>
               ))}
@@ -165,7 +165,7 @@ const AutomationTool = () => {
               <h2 className="text-4xl font-bold text-foreground">
                 Real-World Use Cases for the Smart Task Automation Generator
               </h2>
-              <p className="text-lg text-muted-foreground max-w-4xl mx-auto">
+              <p className="text-base text-muted-foreground max-w-4xl mx-auto">
                 Maximize productivity by automating email workflows, data entry tasks, social media posting, invoice processing, and customer onboarding sequences. Create automated report generation, inventory management systems, appointment scheduling, lead nurturing campaigns, and document approval processes. Transform repetitive administrative work into seamless digital workflows. Integrate multiple platforms and tools through intelligent automation bridges. Eliminate manual data transfers between applications. Set up triggered responses for customer inquiries. Automate backup procedures, file organization, and recurring maintenance tasks for optimal business efficiency.
               </p>
               
@@ -240,7 +240,7 @@ const AutomationTool = () => {
             <div className="space-y-8">
               <div className="space-y-4">
                 <h3 className="text-xl font-semibold text-foreground">Getting Started with Task Automation</h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-sm text-muted-foreground leading-relaxed">
                   Begin by identifying your most time-consuming repetitive tasks. Document each step in detail, noting decision points and exceptions. 
                   Start with simple, linear processes before advancing to complex workflows with multiple conditional branches. This foundation 
                   ensures your automated solutions are robust and reliable from the start.
@@ -249,7 +249,7 @@ const AutomationTool = () => {
               
               <div className="space-y-4">
                 <h3 className="text-xl font-semibold text-foreground">Best Practices for Workflow Design</h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-sm text-muted-foreground leading-relaxed">
                   Design your automation workflows with error handling and fallback procedures. Include checkpoints for quality control and 
                   human oversight where necessary. Test thoroughly in a controlled environment before deploying to production. Regular 
                   monitoring and optimization ensure your automated processes continue delivering value as your business evolves.
@@ -258,7 +258,7 @@ const AutomationTool = () => {
               
               <div className="space-y-4">
                 <h3 className="text-xl font-semibold text-foreground">Measuring Automation ROI</h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-sm text-muted-foreground leading-relaxed">
                   Track time savings, error reduction, and productivity improvements to quantify your automation success. Monitor task 
                   completion rates, processing speed, and resource allocation. Calculate the cost-benefit ratio by comparing automation 
                   setup time against long-term time savings. Use these metrics to identify additional automation opportunities.
