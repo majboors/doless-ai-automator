@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import About from "./pages/About";
 import GestureControl from "./pages/GestureControl";
 import AutomationTool from "./pages/AutomationTool";
+import Browser from "./pages/Browser";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,6 +23,7 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/gesture-control" element={<GestureControl />} />
           <Route path="/automation-tool" element={<AutomationTool />} />
+          <Route path="/browser" element={<Browser />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

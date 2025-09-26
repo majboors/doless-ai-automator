@@ -39,6 +39,9 @@ export const Header = () => {
             <Link to="/automation-tool" className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium">
               Automation Tool
             </Link>
+            <Link to="/browser" className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium">
+              Browser
+            </Link>
             <Link to="/about" className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium">
               About
             </Link>
